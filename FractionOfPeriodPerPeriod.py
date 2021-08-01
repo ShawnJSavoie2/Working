@@ -21,7 +21,7 @@ def FractionOfPeriodPerPeriod(Period, Frequency, FractionOfPeriodPerDay):
     while GoodToGo == 'No':
         WorkingPeriod = Period
         for I in range(PeriodsInDay):
-            WorkingPeriod += WorkingPeriod * WorkingFractionOfPeriodPerPeriod
+            WorkingPeriod += (WorkingPeriod * WorkingFractionOfPeriodPerPeriod)
         if WorkingPeriod < Period:
             if AddOrSubtract == 'Add':
                 WorkingFractionOfPeriodPerPeriod += Quantity
@@ -40,4 +40,3 @@ def FractionOfPeriodPerPeriod(Period, Frequency, FractionOfPeriodPerDay):
             GoodToGo = 'Yes'
     FractionOfPeriodPerPeriod = WorkingFractionOfPeriodPerPeriod
     return FractionOfPeriodPerPeriod
-
