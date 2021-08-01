@@ -3,19 +3,19 @@
 # AveragedTimeOfTravel
 
 def AveragedTimeOfTravel(
-    
+
     P1FractionOfPeriodPerPeriod,
     P1BPeriod,
     P1BDistance,
-    P1BWavelength
+    P1BWavelength,
     P1APeriod,
     P1ADistance,
     P1AWavelength,
-    
+
     P2FractionOfPeriodPerPeriod,
     P2BPeriod,
     P2BDistance,
-    P2BWavelength
+    P2BWavelength,
     P2APeriod,
     P2ADistance,
     P2AWavelength,
@@ -23,7 +23,7 @@ def AveragedTimeOfTravel(
     P3FractionOfPeriodPerPeriod,
     P3BPeriod,
     P3BDistance,
-    P3BWavelength
+    P3BWavelength,
     P3APeriod,
     P3ADistance,
     P3AWavelength,
@@ -31,7 +31,7 @@ def AveragedTimeOfTravel(
     P4FractionOfPeriodPerPeriod,
     P4BPeriod,
     P4BDistance,
-    P4BWavelength
+    P4BWavelength,
     P4APeriod,
     P4ADistance,
     P4AWavelength,
@@ -39,7 +39,7 @@ def AveragedTimeOfTravel(
     P5FractionOfPeriodPerPeriod,
     P5BPeriod,
     P5BDistance,
-    P5BWavelength
+    P5BWavelength,
     P5APeriod,
     P5ADistance,
     P5AWavelength,
@@ -47,11 +47,11 @@ def AveragedTimeOfTravel(
     P6FractionOfPeriodPerPeriod,
     P6BPeriod,
     P6BDistance,
-    P6BWavelength
+    P6BWavelength,
     P6APeriod,
     P6ADistance,
     P6AWavelength
-    
+
     ):
 
     '''
@@ -150,5 +150,5 @@ def AveragedTimeOfTravel(
         SumOfTimes += Pulsar[Time]
     AveragedTimeOfTravel = SumOfTimes / len(PulsarList)
     return AveragedTimeOfTravel
-    
+
     
