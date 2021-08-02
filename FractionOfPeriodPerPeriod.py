@@ -2,7 +2,8 @@
 
 # FractionOfPeriodPerPeriod
 
-def FractionOfPeriodPerPeriod(Period, Frequency, FractionOfPeriodPerDay):
+def FractionOfPeriodPerPeriod(PeriodAtBeginningOfDay, PeriodAtEndingOfDay, Frequency,
+                              FractionOfPeriodPerDay):
 
     '''
 
@@ -19,17 +20,17 @@ def FractionOfPeriodPerPeriod(Period, Frequency, FractionOfPeriodPerDay):
     AddOrSubtract = 'Subtract'
     GoodToGo = 'No'
     while GoodToGo == 'No':
-        WorkingPeriod = Period
+        WorkingPeriod = PeriodAtBeginningOfDay
         for I in range(PeriodsInDay):
             WorkingPeriod += (WorkingPeriod * WorkingFractionOfPeriodPerPeriod)
-        if WorkingPeriod < Period:
+        if WorkingPeriod < PeriodAtEndingOfDay:
             if AddOrSubtract == 'Add':
                 WorkingFractionOfPeriodPerPeriod += Quantity
             else:
                 AddOrSubtract = 'Add'
                 Quantity /= 10
                 WorkingFractionOfPeriodPerPeriod += Quantity
-        elif WorkingPeriod > Period:
+        elif WorkingPeriod > PeriodAtEndingOfDay:
             if AddOrSubtract == 'Subtract':
                 WorkingFractionOfPeriodPerPeriod += Quantity
             else:
